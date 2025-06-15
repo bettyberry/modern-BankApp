@@ -1,5 +1,5 @@
 import React from 'react';
-import shield from '../assets/shield.svg';
+import Shield from '../assets/Shield.svg';
 import star from '../assets/star.svg';
 import send from '../assets/send.svg';
 
@@ -23,7 +23,7 @@ const Reward = () => {
           information and transactions are secure.
         </>
       ),
-      icon: shield,
+      icon: Shield,
     },
     {
       title: 'Balance Transfer',
