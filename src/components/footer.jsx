@@ -129,11 +129,10 @@ const Footer = () => {
         </ul>
       </div>
 
-      {/* Horizontal break line */}
       <div
         style={{
           position: 'absolute',
-          top: '350px',  // adjust this if needed
+          top: '300px',  
           left: '160px',
           width: '1170px',
           borderTop: '1px solid #1F2937',

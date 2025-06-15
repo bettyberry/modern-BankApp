@@ -3,5 +3,23 @@
 @import "tailwindcss";
 body {
   background-color: #00040f;
-  color: white;
+  
+}
+
+.pink__gradient {
+  position: absolute;
+  background: radial-gradient(circle at top left, #ff6bcb, transparent);
+  filter: blur(100px);
+}
+
+.white__gradient {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+  filter: blur(100px);
+}
+
+.blue__gradient {
+  position: absolute;
+  background: radial-gradient(circle at bottom right, #3b82f6, transparent);
+  filter: blur(100px);
 }
