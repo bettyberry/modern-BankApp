@@ -1,7 +1,7 @@
 import React from 'react';
 import Shield from '../assets/Shield.svg';
-import star from '../assets/star.svg';
-import send from '../assets/send.svg';
+import Star from '../assets/Star.svg';
+import Send from '../assets/Send.svg';
 
 const Reward = () => {
   const features = [
@@ -13,7 +13,7 @@ const Reward = () => {
           of promotions and prizes
         </>
       ),
-      icon: star,
+      icon: Star,
     },
     {
       title: '100% Secured',
@@ -33,7 +33,7 @@ const Reward = () => {
           you a lot of money in interest charges.
         </>
       ),
-      icon: send,
+      icon: Send,
     },
   ];
 
