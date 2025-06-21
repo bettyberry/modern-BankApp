@@ -33,75 +33,20 @@ const testimonials = [
 
 const TestimonialCard = ({ id, quote, name, role, img }) => (
   <div
-    className="p-5"
-    style={{
-      width: '370px',
-      height: '395px',
-      boxSizing: 'border-box',
-      color: 'white',
-      marginRight: '24px',
-      background:
-        id === 1
-          ? 'linear-gradient(144.39deg, #FFFFFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%)'
-          : 'transparent',
-      borderRadius: id === 1 ? '20px' : '0',
-    }}
+    className={`p-6 rounded-[20px] max-w-[370px] w-full text-white ${
+      id === 1
+        ? 'bg-gradient-to-br from-white/20 via-zinc-600/20 to-[#11101D]'
+        : ''
+    }`}
   >
-    <img
-      src={quotes}
-      alt="quotes"
-      style={{
-        width: '42.6px',
-        height: '27.6px',
-        marginBottom: '20px',
-      }}
-    />
-    <p className="text-base opacity-70 leading-relaxed" style={{ whiteSpace: 'pre-line' }}>
-      {quote}
-    </p>
+    <img src={quotes} alt="quotes" className="w-[43px] h-[28px] mb-5" />
+    <p className="text-base leading-relaxed opacity-70 whitespace-pre-line">{quote}</p>
 
-    <div className="flex items-center mt-10 relative" style={{ height: '48px', width: '205px' }}>
-      <img
-        src={img}
-        alt={name}
-        style={{
-          width: '48px',
-          height: '48px',
-          position: 'absolute',
-          top: '10px',
-          left: '0px',
-          borderRadius: '50%',
-        }}
-      />
-      <div
-        style={{
-          position: 'absolute',
-          top: '0px',
-          left: '75px',
-          width: '175px',
-          height: '32px',
-          fontWeight: '600',
-          fontSize: '20px',
-          lineHeight: '32px',
-          color: '#FFFFFF',
-        }}
-      >
-        {name}
-      </div>
-      <div
-        style={{
-          position: 'absolute',
-          top: '34px',
-          left: '75px',
-          width: '140px',
-          height: '24px',
-          opacity: 0.5,
-          fontSize: '16px',
-          lineHeight: '100%',
-          color: '#FFFFFF',
-        }}
-      >
-        {role}
+    <div className="flex items-center gap-4 mt-10">
+      <img src={img} alt={name} className="w-[48px] h-[48px] rounded-full object-cover" />
+      <div>
+        <h4 className="text-white font-semibold text-[20px] leading-[32px]">{name}</h4>
+        <p className="text-white text-[16px] opacity-50">{role}</p>
       </div>
     </div>
   </div>
@@ -109,60 +54,28 @@ const TestimonialCard = ({ id, quote, name, role, img }) => (
 
 const About = () => {
   return (
-    <div
-      className="absolute text-white font-poppins"
-      style={{
-        width: '1170px',
-        height: '639px',
-        top: '2891px',
-        left: '135px',
-      }}
-    >
-      <div className="relative w-full h-full">
-        
-        <div
-          style={{
-            width: '470px',
-            height: '164px',
-            fontSize: '48px',
-            lineHeight: '54px',
-            fontWeight: '600',
-          }}
-        >
-          What people are<br/>Saying about us
+    <section className="bg-[#00040f] text-white px-4 sm:px-8 lg:px-16 py-20 font-poppins">
+      <div className="max-w-[1170px] mx-auto">
+        {/* Heading Row */}
+        <div className="flex flex-col lg:flex-row justify-between items-start mb-16 gap-6">
+          <h2 className="text-[36px] sm:text-[48px] font-semibold leading-tight">
+            What people are <br className="hidden sm:block" />
+            saying about us
+          </h2>
+          <p className="text-white/70 text-[16px] sm:text-[18px] leading-[180%] max-w-[500px]">
+            Everything you need to accept card payments and grow your business
+            anywhere on the planet.
+          </p>
         </div>
 
-        <p
-          style={{
-            fontFamily: 'Poppins, sans-serif',
-            position: 'absolute',
-            width: '450px',
-            height: '64px',
-            top: '54px', // relative inside container
-            left: '599px', // 135 + 470 - small offset, fits inside 1170 container
-            opacity: 0.7,
-            fontSize: '18px',
-            lineHeight: '180%',
-            fontWeight: '400',
-          }}
-        >
-          Everything you need to accept card payments<br/>
-          and grow your business anywhere on the planet.
-        </p>
-
-        {/* Testimonials row */}
-        <div
-          className="flex px-8"
-          style={{
-            marginTop: '130px',
-          }}
-        >
-          {testimonials.map(({ id, quote, name, role, img }) => (
-            <TestimonialCard key={id} id={id} quote={quote} name={name} role={role} img={img} />
+        {/* Testimonials */}
+        <div className="flex flex-col sm:flex-row flex-wrap gap-8 justify-start items-stretch">
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.id} {...testimonial} />
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

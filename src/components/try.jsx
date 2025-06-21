@@ -2,81 +2,38 @@ import React from 'react';
 
 const Try = () => {
   return (
-    <div
-      style={{
-        position: 'absolute',
-        width: '1170px',
-        height: '293px',
-        top: '3790px',
-        left: '130px',
-        borderRadius: '20px',
-        background:
-          'linear-gradient(144.39deg, #FFFFFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%)',
-        boxSizing: 'border-box',
-      }}
-    >
-      {/* "Let’s try our service now!" */}
+    <section className="px-4 sm:px-8 lg:px-16 py-16">
       <div
+        className="w-full max-w-[1170px] mx-auto rounded-[20px] text-white px-8 py-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
         style={{
-          position: 'absolute',
-          width: '670px',
-          height: '67px',
-          top: '72px',   // 3862 - 3790 = 72px relative to container
-          left: '102px', // 232 - 130 = 102px relative to container
-          fontFamily: 'Poppins',
-          fontWeight: 600,
-          fontSize: '48px',
-          lineHeight: '140%',
-          letterSpacing: '0%',
-          color: 'white',
-          margin: 0,
+          background:
+            'linear-gradient(144.39deg, #FFFFFF -278.56%, #6D6D6D -78.47%, #11101D 91.61%)',
         }}
       >
-        <p style={{ margin: 0 }}>Let’s try our service now!</p>
-      </div>
+        {/* Text Section */}
+        <div>
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-semibold leading-[140%] mb-4 font-poppins">
+            Let’s try our service now!
+          </h2>
+          <p className="text-white/70 text-[16px] sm:text-[18px] leading-[160%] max-w-[500px] font-poppins">
+            Everything you need to accept card payments
+            <br className="hidden sm:block" />
+            and grow your business anywhere on the planet.
+          </p>
+        </div>
 
- <div>
+        {/* Button */}
         <button
+          className="w-[170px] h-[64px] rounded-[10px] text-black text-[16px] font-bold"
           style={{
-            position: 'absolute',
-            width: '170px',
-            height: '64px',
-            top: '123px',  // 3913 - 3790 = 123px relative to container
-            left: '905px', // 1035 - 130 = 905px relative to container
-            borderRadius: '10px',
             background:
               'linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%)',
-            border: 'none',
-            cursor: 'pointer',
-            color: 'black',
           }}
         >
           Get Started
         </button>
       </div>
-      <div
-        style={{
-          position: 'absolute',
-          width: '445px',
-          height: '58px',
-          top: '163px',   
-          left: '102px',  
-          color: 'white',
-          margin: 0,
-          fontSize: '18px',
-          lineHeight: '160%',
-        
-
-        }}
-      >
-        <p style={{ margin: 0,fontWeight:400,color:'#FFFFFFB2' }}>
-          Everything you need to accept card payments
-          <br />
-          and grow your business anywhere on the planet.
-        </p>
-      </div>
-
-    </div>
+    </section>
   );
 };
 

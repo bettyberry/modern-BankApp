@@ -4,43 +4,32 @@ import binance from '../assets/binance.png';
 import coinbase from '../assets/coinbase.png';
 import dropbox from '../assets/dropbox.png';
 
-
 const Accounts = () => {
   return (
-    <div
-      style={{
-        position: 'absolute',
-        top: '3630px',
-        left: '187.41px',
-        width: '1065.76px',
-        height: '60px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: '20px',
-      }}
-    >
-      <img
-        src={airbnb}
-        alt="Airbnb"
-        style={{ height: '60px', width:'192.25px',objectFit: 'contain' }}
-      />
-      <img
-        src={binance}
-        alt="Binance"
-        style={{ height: '60px', width:'192.25px',objectFit: 'contain' }}
-      />
-      <img
-        src={coinbase}
-        alt="Coinbase"
-        style={{ height: '60px', width:'192.25px',objectFit: 'contain' }}
-      />
-      <img
-        src={dropbox}
-        alt="Dropbox"
-        style={{ height: '60px', width:'192.25px',objectFit: 'contain' }}
-      />
-    </div>
+    <section className="bg-[#00040f] py-8 px-4 sm:px-8 lg:px-16">
+      <div className="max-w-[1170px] mx-auto flex flex-wrap items-center justify-between gap-6">
+        <img
+          src={airbnb}
+          alt="Airbnb"
+          className="h-[60px] w-[192px] object-contain"
+        />
+        <img
+          src={binance}
+          alt="Binance"
+          className="h-[60px] w-[192px] object-contain"
+        />
+        <img
+          src={coinbase}
+          alt="Coinbase"
+          className="h-[60px] w-[192px] object-contain"
+        />
+        <img
+          src={dropbox}
+          alt="Dropbox"
+          className="h-[60px] w-[192px] object-contain"
+        />
+      </div>
+    </section>
   );
 };
 

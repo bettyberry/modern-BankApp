@@ -1,188 +1,74 @@
 import React from 'react';
 import logo from '../assets/logo.svg';
 import instagram from '../assets/instagram.svg';
-import facebook from '../assets/facebook.svg';      
+import facebook from '../assets/facebook.svg';
 import twitter from '../assets/twitter.svg';
 import linkedin from '../assets/linkedin.svg';
 
 const Footer = () => {
   return (
-    <div
-      style={{
-        position: 'absolute',
-        width: '1440px',
-        height: '418px',
-        top: '4165px',
-        left: '0px',
-        backgroundColor: 'black',
-        color: 'white',
-        boxSizing: 'border-box',
-      }}
-    >
-      {/* Logo and Description */}
-      <div
-        style={{
-          position: 'absolute',
-          width: '266px',
-          height: '72.14px',
-          top: '72px',
-          left: '135px',
-        }}
-      >
-        <img
-          src={logo}
-          alt="Logo"
-          style={{ width: '266px', height: '72.14px', objectFit: 'contain' }}
-        />
-        <p
-          style={{
-            color: '#9CA3AF',
-            fontSize: '18px',
-            width: '312px',
-            height: '64px',
-            marginTop: '20px',
-            fontWeight: '400',
-            lineHeight: '32px',
-            fontFamily: 'Poppins, sans-serif',
-          }}
-        >
-          A new way to make the payments easy, reliable and secure.
-        </p>
+    <footer className="bg-black text-white px-4 sm:px-8 lg:px-20 pt-16 pb-8 font-poppins">
+      <div className="max-w-[1170px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* Logo & Description */}
+        <div className="col-span-1">
+          <img src={logo} alt="Logo" className="w-[266px] h-[72px] object-contain" />
+          <p className="text-gray-400 text-[18px] leading-8 mt-4 max-w-[312px]">
+            A new way to make the payments easy, reliable and secure.
+          </p>
+        </div>
+
+        {/* Useful Links */}
+        <div>
+          <h3 className="text-[18px] font-semibold mb-4">Useful Links</h3>
+          <ul className="text-gray-400 space-y-2 text-sm">
+            <li>Content</li>
+            <li>How it Works</li>
+            <li>Create</li>
+            <li>Explore</li>
+            <li>Terms & Services</li>
+          </ul>
+        </div>
+
+        {/* Community */}
+        <div>
+          <h3 className="text-[18px] font-semibold mb-4">Community</h3>
+          <ul className="text-gray-400 space-y-2 text-sm">
+            <li>Help Center</li>
+            <li>Partners</li>
+            <li>Suggestions</li>
+            <li>Blog</li>
+            <li>Newsletters</li>
+          </ul>
+        </div>
+
+        {/* Partner */}
+        <div>
+          <h3 className="text-[18px] font-semibold mb-4">Partner</h3>
+          <ul className="text-gray-400 space-y-2 text-sm">
+            <li>Our Partner</li>
+            <li>Become a Partner</li>
+          </ul>
+        </div>
       </div>
 
-      {/* Useful Links */}
-      <div
-        style={{
-          position: 'absolute',
-          width: '136px',
-          height: '219px',
-          top: '72px',
-          left: '611px',
-        }}
-      >
-        <h3
-          style={{
-            fontSize: '18px',
-            fontWeight: '600',
-            marginBottom: '16px',
-          }}
-        >
-          Useful Links
-        </h3>
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {['Content', 'How it Works', 'Create', 'Explore', 'Terms & Services'].map(
-            (item, index) => (
-              <li
-                key={index}
-                style={{
-                  color: '#9CA3AF',
-                  width: '65px',
-                  height: '24px',
-                  marginBottom: '4px',
-                  position: 'relative',
-                  left: '1px',
-                }}
-              >
-                {item}
-              </li>
-            )
-          )}
-        </ul>
-      </div>
+      {/* Divider */}
+      <div className="border-t border-gray-800 my-10" />
 
-      {/* Community */}
-      <div
-        style={{
-          position: 'absolute',
-          width: '136px',
-          top: '72px',
-          left: '811px',
-        }}
-      >
-        <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>
-          Community
-        </h3>
-        <ul style={{ color: '#9CA3AF', listStyle: 'none', padding: 0, lineHeight: '28px' }}>
-          <li>Help Center</li>
-          <li>Partners</li>
-          <li>Suggestions</li>
-          <li>Blog</li>
-          <li>Newsletters</li>
-        </ul>
-      </div>
-
-      {/* Partner */}
-      <div
-        style={{
-          position: 'absolute',
-          width: '136px',
-          top: '72px',
-          left: '1011px',
-        }}
-      >
-        <h3 style={{ fontSize: '18px', fontWeight: '600', marginBottom: '16px' }}>
-          Partner
-        </h3>
-        <ul style={{ color: '#9CA3AF', listStyle: 'none', padding: 0, lineHeight: '28px' }}>
-          <li>Our Partner</li>
-          <li>Become a Partner</li>
-        </ul>
-      </div>
-
-      <div
-        style={{
-          position: 'absolute',
-          top: '300px',  
-          left: '160px',
-          width: '1170px',
-          borderTop: '1px solid #1F2937',
-        }}
-      />
-
-      
-      <div
-        style={{
-          position: 'absolute',
-          width: '100%',
-          paddingTop: '20px',
-        }}
-      >
-        <p
-          style={{
-            position: 'absolute',
-            width: '419px',
-            height: '27px',
-            top: '361px',
-            left: '160px',
-            color: '#9CA3AF',
-            fontSize: '14px',
-            fontWeight: '400',
-            lineHeight: '150%',
-            fontFamily: 'arial, sans-serif',
-          }}
-        >
+      {/* Bottom Bar */}
+      <div className="max-w-[1170px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-gray-400 text-sm text-center md:text-left">
           Copyright © 2021 HooBank. All Rights Reserved.
         </p>
-      </div>
 
-      <div
-        style={{
-          position: 'absolute',
-          top: '364px', // adjust as needed
-          left: '1125px',
-          width: '176px',
-          height: '21px',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}
-      >
-        <img src={instagram} alt="instagram" style={{ height: '21px', width: 'auto' }} />
-        <img src={facebook} alt="facebook" style={{ height: '21px', width: 'auto' }} />
-        <img src={twitter} alt="twitter" style={{ height: '21px', width: 'auto' }} />
-        <img src={linkedin} alt="linkedin" style={{ height: '21px', width: 'auto' }} />
+        {/* Socials */}
+        <div className="flex items-center gap-6">
+          <img src={instagram} alt="instagram" className="w-5 h-5 cursor-pointer" />
+          <img src={facebook} alt="facebook" className="w-5 h-5 cursor-pointer" />
+          <img src={twitter} alt="twitter" className="w-5 h-5 cursor-pointer" />
+          <img src={linkedin} alt="linkedin" className="w-5 h-5 cursor-pointer" />
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
