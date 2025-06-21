@@ -19,7 +19,7 @@ const Navbar = () => {
           <li className="hover:text-cyan-400 cursor-pointer mr-14">Home</li>
           <li className="hover:text-cyan-400 cursor-pointer mr-14">About Us</li>
           <li className="hover:text-cyan-400 cursor-pointer mr-14">Features</li>
-          <li className="hover:text-cyan-400 cursor-pointer">Solution</li>
+          <li className="hover:text-cyan-400 cursor-pointer">Clients</li>
         </ul>
 
         <div className="sm:hidden flex items-center">

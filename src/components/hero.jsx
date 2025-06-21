@@ -14,72 +14,24 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
+      <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
 
         {/* Text Block */}
         <div className="flex-1 min-w-0">
-          <h1 className="text-white font-semibold text-[3.5rem] leading-[1.1] mb-4">
+          <h1 className="text-white font-semibold text-[4.5rem] leading-[1.1] mb-4">
             The Next
           </h1>
 
-          {/* "Generation" + Get Started */}
           <div className="flex items-center gap-4 mb-4">
-            <h1 className="bg-gradient-to-r from-cyan-200 to-cyan-500 text-transparent bg-clip-text font-semibold text-[3.5rem] leading-[1.1]">
+            <h1 className="bg-gradient-to-r from-cyan-200 to-cyan-500 text-transparent bg-clip-text font-semibold text-[4.5rem] leading-[1.1]">
               Generation
             </h1>
-
-            {/* Get Started */}
-            <div className="relative top-[-10px]">
-              <div
-                className="w-[140px] h-[140px] rounded-full p-[3px] flex items-center justify-center"
-                style={{
-                  background:
-                    'linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%)',
-                }}
-              >
-                <div
-                  className="w-full h-full rounded-full flex flex-col items-center justify-center"
-                  style={{
-                    background: 'linear-gradient(145deg, #0b0f2c, #00040f)',
-                  }}
-                >
-                  <div className="flex items-center justify-center">
-                    <p
-                      className="text-[18px] font-medium"
-                      style={{
-                        background:
-                          'linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        marginRight: '4px',
-                      }}
-                    >
-                      Get
-                    </p>
-                    <img src={arrow} alt="arrow" className="w-5 h-5" />
-                  </div>
-                  <p
-                    className="text-[18px] font-medium"
-                    style={{
-                      background:
-                        'linear-gradient(157.81deg, #DEF9FA -43.27%, #BEF3F5 -21.24%, #9DEDF0 12.19%, #7DE7EB 29.82%, #5CE1E6 51.94%, #33BBCF 90.29%)',
-                      WebkitBackgroundClip: 'text',
-                      WebkitTextFillColor: 'transparent',
-                    }}
-                  >
-                    Started
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Line 3 */}
-          <h1 className="text-white font-semibold text-[3.5rem] leading-[1.1] whitespace-nowrap">
+          <h1 className="text-white font-semibold text-[4.5rem] leading-[1.1] whitespace-nowrap">
             Payment Method.
           </h1>
 
-          {/* Description */}
           <p className="text-white/80 text-[18px] font-normal leading-[1.5] max-w-[480px] mt-8">
             Our team of experts uses a methodology to identify <br />
             the credit cards most likely to fit your needs.<br />
@@ -88,12 +40,13 @@ const Hero = () => {
         </div>
 
         {/* Robot Image */}
-        <div className="flex-shrink-0 w-full md:max-w-[670px] relative mt-10 md:mt-0">
+        <div className="flex-shrink-0 w-full md:max-w-[670px] relative pt-0">
           <img
             src={robot}
             alt="robot"
-            className="w-full h-auto object-contain relative z-10"
+            className="w-full max-w-[700px] h-[450px] object-contain relative z-10"
           />
+
           {/* Gradient overlays */}
           <div className="absolute top-0 left-0 w-2/5 h-1/3 blue__gradient rounded-lg" />
           <div className="absolute bottom-40 left-10 w-4/5 h-4/5 rounded-full white__gradient opacity-20" />

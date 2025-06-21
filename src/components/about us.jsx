@@ -69,7 +69,7 @@ const About = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="flex flex-col sm:flex-row flex-wrap gap-8 justify-start items-stretch">
+        <div className="flex flex-col sm:flex-row sm:flex-nowrap gap-y-8 gap-x-20 justify-start items-stretch">
           {testimonials.map((testimonial) => (
             <TestimonialCard key={testimonial.id} {...testimonial} />
           ))}

@@ -6,9 +6,9 @@ import google from '../assets/google.svg';
 const Payment = () => {
   return (
     <section className="bg-transparent px-4 sm:px-8 lg:px-16 py-20 font-poppins">
-      <div className="max-w-[1170px] mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <div className="max-w-[1170px] mx-auto flex flex-col lg:flex-row items-center gap-20">
         {/* Left: Image */}
-        <div className="flex-shrink-0 w-full max-w-[500px] flex justify-center">
+        <div className="flex-shrink-0 w-full max-w-[600px] flex justify-center">
           <img
             src={bill}
             alt="bill"
@@ -18,7 +18,7 @@ const Payment = () => {
 
         {/* Right: Content */}
         <div className="flex flex-col justify-center items-start flex-1">
-          <h2 className="text-white font-semibold text-[36px] sm:text-[48px] leading-[160%] mb-4 max-w-[470px]">
+          <h2 className="text-white font-semibold text-[36px] sm:text-[48px] leading-[160%] mb-4 max-w-[470px] whitespace-normal">
             Easily control your <br /> billing & invoicing.
           </h2>
 
